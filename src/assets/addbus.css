@@ -1,0 +1,18 @@
+.bus-form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px ;
+}
+button{
+    width: 100px;
+    background-color: rgb(55, 55, 158);
+    height: 40px;
+    box-shadow: rgba(160, 160, 160, 0.548) 2px 2px 10px;
+}
+label{
+    padding: 5px;
+}
+input{
+    border: 1px solid rgb(173, 207, 118);
+    color: rgb(142, 194, 207);
+}
