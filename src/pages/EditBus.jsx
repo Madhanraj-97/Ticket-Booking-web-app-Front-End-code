@@ -44,7 +44,6 @@ export function EditBus() {
             console.log(editedBus);  // Log to check the full object with admin
             const response = await authService.modifyBus(editedBus);// API call for modify bus
             console.log("editedBus modifiy successfully:", response.data);
-            
             navigate('/buslist')
            
         } catch (error) {
@@ -52,7 +51,7 @@ export function EditBus() {
         }
     };
 
-    const getBusList= (admin)=>{
+    const chnageBusList= ()=>{
         const busList=admin.bus;
 
     }
