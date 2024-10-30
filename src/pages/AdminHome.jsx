@@ -14,7 +14,7 @@ export function AdminHome() {
   // if (!admin) return <h1>No admin data available</h1>;
 
   return (
-    <div>
+    <>
       {/* Navbar for all admin-related routes */}
       <Navbar />
 
@@ -28,6 +28,6 @@ export function AdminHome() {
         <Route path='addbus' element={<AddBus />} />
         <Route path='editbus' element={<EditBus/>} />
       </Routes>
-    </div>
+    </>
   );
 }

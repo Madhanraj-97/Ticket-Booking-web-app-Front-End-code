@@ -18,8 +18,8 @@ const saveBus = (bus, id) => {
   return axios.put(`http://localhost:8080/admin/savebus?id=${id}`, bus);
 };
 
-const modifyBus = (bus) => {
-  return axios.put(`http://localhost:8080/bus?id=${bus.id}`,bus);
+const modifyBus = (bus,id) => {
+  return axios.put(`http://localhost:8080/admin/updatebus?id=${id}`,bus);
 };
 
-export default { registerAdmin, loginAdmin, saveBus, modifyBus };
+export default { registerAdmin, loginAdmin, saveBus, modifyBus,getAdminById };

@@ -42,20 +42,14 @@ export function EditBus() {
 
         try {
             console.log(editedBus);  // Log to check the full object with admin
-            const response = await authService.modifyBus(editedBus);// API call for modify bus
+            const response = await authService.modifyBus(editedBus, editedBus.id);// API call for modify bus
             console.log("editedBus modifiy successfully:", response.data);
-            navigate('/buslist')
+            navigate('/Home/buslist');
            
         } catch (error) {
-            console.error("Error saving editedBus:", error);
+            console.error("Error saving editedBus:", error.AdminContext);
         }
     };
-
-    const chnageBusList= ()=>{
-        const busList=admin.bus;
-
-    }
-
 
     return (
         <form  onSubmit={handleSubmit} className="bus-form">
