@@ -6,3 +6,13 @@ tr,td,th,table{
 table,tr,th,td{
     border-collapse: collapse;
 }
+#delete{
+    width: 100px;
+    background-color: rgb(238, 10, 10);
+    color: wheat;
+    padding: 5px;
+}
+#seatbtn{
+    width: 150px;
+    background-color: rgb(85, 88, 245);
+}

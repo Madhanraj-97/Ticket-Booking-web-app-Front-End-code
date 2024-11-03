@@ -5,7 +5,7 @@ import '../assets/addbus.css'
 import { AdminContext } from "../service/AdminContext";
 
 export function EditBus() {
-    const {admin, setAdmin}=useContext(AdminContext);
+    const { setAdmin}=useContext(AdminContext);
     const space=" :    ";
     const location = useLocation();
     const { bus } = location.state || {}; // Destructure editedBus from location state
@@ -44,6 +44,7 @@ export function EditBus() {
             console.log(editedBus);  // Log to check the full object with admin
             const response = await authService.modifyBus(editedBus, editedBus.id);// API call for modify bus
             console.log("editedBus modifiy successfully:", response.data);
+            setAdmin(response.data.data);
             navigate('/Home/buslist');
            
         } catch (error) {

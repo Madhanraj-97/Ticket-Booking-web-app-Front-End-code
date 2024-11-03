@@ -2,11 +2,13 @@ import { useContext, useState } from 'react';
 import '../assets/addbus.css';
 import { AdminContext } from '../service/AdminContext';
 import authService from '../service/authService';
+import { useNavigate } from 'react-router-dom';
 
 export function AddBus() {
     const { admin } = useContext(AdminContext);
     const id= admin.id;
     const { setAdmin } = useContext(AdminContext);
+    const navigate = useNavigate();
 
     const [bus, setBus] = useState({
         busno: '',
@@ -49,7 +51,9 @@ export function AddBus() {
             console.log(bus);  // Log to check the full object with admin
             const response = await authService.saveBus(bus,id);
             console.log("Bus saved successfully:", response.data);
-            setAdmin(response.data.data)
+            setAdmin(response.data.data);
+            navigate("/Home/buslistgit ")
+
         } catch (error) {
             console.error("Error saving bus:", error);
         }
