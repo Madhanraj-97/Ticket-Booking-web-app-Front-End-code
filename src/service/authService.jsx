@@ -22,9 +22,9 @@ const modifyBus = (bus,id) => {
   return axios.put(`http://localhost:8080/admin/updatebus?id=${id}`,bus);
 };
 const deleteBus=(busid)=>{
-  let Admin=axios.put(`http://localhost:8080/admin/deletebus?id=${busid}`)
-  axios.delete(`http://localhost:8080/bus?id=${busid}`)
-  return Admin;
+  return axios.put(`http://localhost:8080/admin/deletebus?id=${busid}`)
+  
+  
   
 };
 

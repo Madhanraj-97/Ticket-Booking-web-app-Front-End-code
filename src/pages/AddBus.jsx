@@ -52,7 +52,7 @@ export function AddBus() {
             const response = await authService.saveBus(bus,id);
             console.log("Bus saved successfully:", response.data);
             setAdmin(response.data.data);
-            navigate("/Home/buslistgit ")
+            navigate("/admin/buslist ")
 
         } catch (error) {
             console.error("Error saving bus:", error);

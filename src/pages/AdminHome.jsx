@@ -22,11 +22,11 @@ export function AdminHome() {
       <Routes>
         {/* Default redirect to /home/welcome when accessing /home */}
         <Route path="/" element={<Navigate to="welcome" />} />
-        <Route path="profile" element={<AdminProfile />} />
-        <Route path="welcome" element={<AdminWelcome />} />
-        <Route path="buslist" element={<BusList />} />
-        <Route path='addbus' element={<AddBus />} />
-        <Route path='editbus' element={<EditBus/>} />
+        <Route path="/profile" element={<AdminProfile />} />
+        <Route path="/welcome" element={<AdminWelcome />} />
+        <Route path="/buslist" element={<BusList />} />
+        <Route path='/addbus' element={<AddBus />} />
+        <Route path='/editbus' element={<EditBus/>} />
       </Routes>
     </>
   );

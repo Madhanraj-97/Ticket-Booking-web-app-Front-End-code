@@ -23,7 +23,7 @@ function AdminLogin() {
     try {
       const response = await authService.loginAdmin(credentials); // API call for admin login
       setAdmin(response.data.data); // Store admin data using setAdmin, which will also save it to sessionStorage
-      navigate('/home'); // Navigate to home page after login success
+      navigate('/admin'); // Navigate to home page after login success
       console.log(response.data.data);
     } catch (error) {
       console.error('Failed to login admin:', error);

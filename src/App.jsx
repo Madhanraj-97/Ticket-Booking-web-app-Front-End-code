@@ -11,11 +11,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Route for Admin login */}
-          <Route path="/" element={<AdminLogin />} />
-          <Route path="/reg" element={<AdminRegister />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/adminreg" element={<AdminRegister />} />
 
           {/* Protected route for Admin home and dashboard routes */}
-          <Route path="/home/*" element={<AdminHome/>} />
+          <Route path="/admin/*" element={<AdminHome/>} />
         </Routes>
       </BrowserRouter>
     </AdminProvider>
