@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AdminProvider } from './service/AdminContext';
 import { AdminRegister } from './pages/AdminRegister';
 import { AdminHome } from './pages/AdminHome';
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Route for Admin login */}
+          <Route path="/" element={<Homepage/>}/>
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/adminreg" element={<AdminRegister />} />
 
