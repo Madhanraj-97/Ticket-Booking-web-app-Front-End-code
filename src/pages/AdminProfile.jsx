@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AdminContext } from "../service/AdminContext";
+import React from 'react';
+
 
 export function AdminProfile() {
     const { admin } = useContext(AdminContext);

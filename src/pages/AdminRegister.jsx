@@ -2,6 +2,8 @@ import { useContext, useState } from "react"
 import { AdminContext } from "../service/AdminContext";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../service/authService";
+import React from 'react';
+
 
 export function AdminRegister() {
     const [credentials, setCredentials] = useState({
