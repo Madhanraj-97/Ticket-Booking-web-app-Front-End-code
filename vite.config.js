@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
-
 export default defineConfig({
-  optimizeDeps: {
-    include: ['react-router-dom'],
+  plugins: [react()],
+  build: {
+    outDir: 'dist', // This is where the build files will be output
   },
 });
