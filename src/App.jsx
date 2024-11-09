@@ -1,4 +1,5 @@
 import './App.css';
+import { StrictMode } from 'react'
 import AdminLogin from './pages/AdminLogin';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AdminProvider } from './service/AdminContext';
