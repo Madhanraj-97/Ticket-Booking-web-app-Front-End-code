@@ -4,12 +4,13 @@ import { AdminProvider } from './service/AdminContext';
 import { AdminRegister } from './pages/AdminRegister';
 import { AdminHome } from './pages/AdminHome';
 import Homepage from './pages/Homepage';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
     <AdminProvider>
-      <BrowserRouter>
+      <Router>
         <Routes>
           {/* Route for Admin login */}
           <Route path="/" element={<Homepage/>}/>
@@ -19,7 +20,7 @@ function App() {
           {/* Protected route for Admin home and dashboard routes */}
           <Route path="/admin/*" element={<AdminHome/>} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </AdminProvider>
   );
 }
