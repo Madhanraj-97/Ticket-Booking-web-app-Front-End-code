@@ -25,7 +25,7 @@ export function AdminRegister() {
         try {
             const response = await authService.registerAdmin(credentials);
             setAdmin(response.data.data)
-            navigate('/home'); // Navigate to home page after login success
+            navigate('/admin'); // Navigate to home page after login success
             console.log(response.data.data);
         } catch (error) {
             console.error('Failed to login admin:', error);

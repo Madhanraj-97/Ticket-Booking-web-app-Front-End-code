@@ -59,7 +59,7 @@ function AdminLogin() {
           />
         </div>
         <button type="submit">Login</button>
-        <p>{"Don't "}have an account? <Link className='nav-link' to='/reg' >Register</Link></p>
+        <p>{"Don't "}have an account? <Link className='nav-link' to='/adminreg' >Register</Link></p>
         
       </form>
     </div>

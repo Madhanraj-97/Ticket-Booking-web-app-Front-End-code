@@ -101,4 +101,4 @@ export function AddBus() {
             <button type="submit">Submit</button>
         </form>
     );
-}
+}<img class="gettyImage--JRv78" src="https://media.istockphoto.com/id/1095141322/photo/bus-traveling-on-the-asphalt-road-in-rural-landscape-at-sunset.jpg?b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=_ez6vm4IVPjSFcweCEwmLwn7-eRidyl8LuS-ufrgNFE=" srcset="https://media.istockphoto.com/id/1095141322/photo/bus-traveling-on-the-asphalt-road-in-rural-landscape-at-sunset.webp?b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=_ez6vm4IVPjSFcweCEwmLwn7-eRidyl8LuS-ufrgNFE=, https://media.istockphoto.com/id/1095141322/photo/bus-traveling-on-the-asphalt-road-in-rural-landscape-at-sunset.jpg?b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=_ez6vm4IVPjSFcweCEwmLwn7-eRidyl8LuS-ufrgNFE="></img>
