@@ -4,6 +4,8 @@ import UserNavbar from '../component/UserNavbar';
 export default function Homepage() {
   return (<>
     <UserNavbar />
+
+    <p>IN PROGESS</p>
     <div>
       <section><input type="text" placeholder='from' /></section>
       <section><input type="text" placeholder='To' /></section>
