@@ -1,13 +1,18 @@
 import React from 'react'
+import '../assets/homenavbar.css'
 import { Link } from 'react-router-dom'
 
 export default function UserNavbar() {
   return (
-    <div id='usernav'>
-    <ul className="nav-bar">
-        <li><Link className='nav-link' to="/">Home</Link></li>
-      <li><Link className='nav-link' to="/admin/welcome">Account</Link></li>
-    </ul>
-  </div>
+    <div id='home-nav'>
+      <div className='logo'>
+        <section>LOGO</section>
+      </div>
+      <div className='navopt'>
+        <section>help</section>
+        <section>Language</section>
+        <section>Account</section>
+      </div>
+    </div>
   )
 }

@@ -1,0 +1,27 @@
+#home-nav{
+    display: flex;
+    /* height: 30px ; */
+    padding: .5em;
+}
+.navopt{
+    flex-grow: 1;
+    display: flex;
+    padding: .5em;
+}
+div{
+    border: 1px solid greenyellow;
+}
+.logo{
+    flex-grow: 1;
+    display: flex;
+    justify-content: start;
+    padding: .5em;
+}
+.navopt section{
+    flex-grow: 1;
+}
+#home-nav section{
+    /* border: 1px solid green; */
+    padding: .5em;
+}
+
