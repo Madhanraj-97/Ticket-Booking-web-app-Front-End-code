@@ -5,7 +5,7 @@ import { Navbar } from '../component/Navbar';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { AdminProfile } from './AdminProfile';
 import { AdminWelcome } from './AdminWelcome';
-import { BusList } from './BusList';
+import { AdminBusList } from './AdminBusList';
 import { AddBus } from './AddBus';
 import { EditBus } from './EditBus';
 import React from 'react';
@@ -27,7 +27,7 @@ export function AdminHome() {
         <Route path="/" element={<Navigate to="welcome" />} />
         <Route path="/profile" element={<AdminProfile />} />
         <Route path="/welcome" element={<AdminWelcome />} />
-        <Route path="/buslist" element={<BusList />} />
+        <Route path="/buslist" element={<AdminBusList />} />
         <Route path='/addbus' element={<AddBus />} />
         <Route path='/editbus' element={<EditBus/>} />
       </Routes>

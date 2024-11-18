@@ -6,6 +6,7 @@ import { AdminHome } from './pages/AdminHome';
 import Homepage from './pages/Homepage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
+import BusList from './pages/BusList';
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Homepage/>}/>
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/adminreg" element={<AdminRegister />} />
+          <Route path="/buslist" element={<BusList/>}/>
 
           {/* Protected route for Admin home and dashboard routes */}
           <Route path="/admin/*" element={<AdminHome/>} />

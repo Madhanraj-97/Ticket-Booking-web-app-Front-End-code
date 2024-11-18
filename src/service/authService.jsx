@@ -22,10 +22,12 @@ const modifyBus = (bus,id) => {
   return axios.put(`${API_URL}admin/updatebus?id=${id}`,bus);
 };
 const deleteBus=(busid)=>{
-  return axios.put(`${API_URL}admin/deletebus?id=${busid}`)
-  
-  
-  
+  return axios.put(`${API_URL}admin/deletebus?id=${busid}`);
 };
+const getBuslist=(city)=>{
+  return axios.get(`${API_URL}bus/buslist?source=${city.from}&destination=${city.to}`);
 
-export default { registerAdmin, loginAdmin, saveBus, modifyBus,getAdminById,deleteBus };
+}
+
+
+export default { registerAdmin, loginAdmin, saveBus, modifyBus,getAdminById,deleteBus,getBuslist };
