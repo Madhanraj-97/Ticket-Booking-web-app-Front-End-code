@@ -24,8 +24,8 @@ export default function Homepage() {
     try {
       console.log("Request Data:", city);
       const response = await authService.getBuslist(city);
-      console.log("Response:", response);
-      setBuslist(response.data);
+      console.log("Response:", response.data);
+      setBuslist(response.data.data);
       navigate("/buslist", { state: response.data });
     } catch (error) {
       console.error("Error fetching bus list:", error.response || error.message);

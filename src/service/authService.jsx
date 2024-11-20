@@ -10,7 +10,7 @@ const loginAdmin = (credentials) => {
   return axios.get(`${API_URL}admin/login?email=${credentials.adminEmail}&password=${credentials.password}`);
 };
 
-const getAdminById=(id)=>{
+const getAdminById = (id) => {
   return axios.get(`${API_URL}admin?id=${id}`);
 }
 
@@ -18,16 +18,17 @@ const saveBus = (bus, id) => {
   return axios.put(`${API_URL}admin/savebus?id=${id}`, bus);
 };
 
-const modifyBus = (bus,id) => {
-  return axios.put(`${API_URL}admin/updatebus?id=${id}`,bus);
+const modifyBus = (bus, id) => {
+  return axios.put(`${API_URL}admin/updatebus?id=${id}`, bus);
 };
-const deleteBus=(busid)=>{
+const deleteBus = (busid) => {
   return axios.put(`${API_URL}admin/deletebus?id=${busid}`);
 };
-const getBuslist=(city)=>{
+const getBuslist = (city) => {
   return axios.get(`${API_URL}bus/buslist?source=${city.from}&destination=${city.to}`);
+  // return axios.get(`http://localhost:8080/bus/buslist?source=${city.from}&destination=${city.to}`)
 
 }
 
 
-export default { registerAdmin, loginAdmin, saveBus, modifyBus,getAdminById,deleteBus,getBuslist };
+export default { registerAdmin, loginAdmin, saveBus, modifyBus, getAdminById, deleteBus, getBuslist };

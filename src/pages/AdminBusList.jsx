@@ -50,7 +50,40 @@ export function AdminBusList() {
                                     Delete
                                 </button>
                     </td>
+                    <td><table>
+            <tr>
+                <th>Reg No.</th>
+                <th>Seat Count</th>
+                <th>Bus Type</th>
+                <th>Seat Type</th>
+                <th>Route</th>
+                <th>EDIT</th>
+                <th>Delete</th>
+                <th>Show seats</th>
+            </tr>
+            {busList.map((bus) => (
+                <tr key={bus.id}>
+                    <td>{bus.busno}</td>
+                    <td>{bus.seatcapacity}</td>
+                    <td>{bus.ac}</td>
+                    <td>{bus.seattype}</td>
+                    <td>{bus.schedule.sourcecity}{" <---> "}{bus.schedule.destinationcity}</td>
                     <td>
+                        <Link className='nav-link' to="/home/editbus" state={{ bus }}>
+                            <button>Edit</button>
+                        </Link>
+                    </td>
+                    <td>
+                    <button id="delete" onClick={() => handleDelete(bus.id)}>
+                                    Delete
+                                </button>
+                    </td>
+                    <td>
+                        <button id='seatbtn' type="button" >Show seats</button>
+                    </td>
+                </tr>
+            ))}
+        </table>
                         <button id='seatbtn' type="button" >Show seats</button>
                     </td>
                 </tr>
