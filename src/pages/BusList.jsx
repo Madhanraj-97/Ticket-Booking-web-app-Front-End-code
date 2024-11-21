@@ -9,29 +9,23 @@ export default function BusList() {
   console.log(busList)
 
   return (
-    <>
+    <div>
       <UserNavbar />
       <p>result</p>
       <ul>
-        {BusList.map((bus, index) => {
-          return (
-            <li key={index}>
-              <div className='bus'>
-                <section className='travelsname'>{bus.operator}</section>
-                <section className='departuretime'>Depart TIME</section>
-                <section className='duration' >{bus.schedule.estimatedtime}</section>
-                <section className='Arrivaltime'>Arrival Time</section>
-                <section className='fare'> 600 </section>
-                <section className='seats'>avilable seats</section>
-                <section className=''></section>
-              </div>
-            </li>
-          );
-
-        })}
-
+        {busList.map((bus) => (
+          <li key={bus.id}>
+            <div>
+              <div>{bus.busno}</div>
+              <div>{bus.seatcapacity}</div>
+              <div>{bus.ac}</div>
+              <div>{bus.seattype}</div>
+              <div>{bus.schedule.sourcecity}{" <---> "}{bus.schedule.destinationcity}</div>
+            </div>
+          </li>)
+        )}
       </ul>
-    </>
+    </div>
 
   );
 

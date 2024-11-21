@@ -27,7 +27,7 @@ export function AdminHome() {
         <Route path="/" element={<Navigate to="welcome" />} />
         <Route path="/profile" element={<AdminProfile />} />
         <Route path="/welcome" element={<AdminWelcome />} />
-        <Route path="/buslist" element={<AdminBusList />} />
+        <Route path="/adminbuslist" element={<AdminBusList />} />
         <Route path='/addbus' element={<AddBus />} />
         <Route path='/editbus' element={<EditBus/>} />
       </Routes>

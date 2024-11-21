@@ -5,7 +5,7 @@ import authService from '../service/authService';
 import { useNavigate } from 'react-router-dom';
 
 export default function Homepage() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const [city, setCity] = useState({
     from: "",
@@ -15,7 +15,7 @@ export default function Homepage() {
   const [buslist, setBuslist] = useState(null);
 
   const handleChange = (e) => {
-    const {name, value}= e.target;
+    const { name, value } = e.target;
     setCity({ ...city, [name]: value });
   }
 
@@ -37,33 +37,33 @@ export default function Homepage() {
       <UserNavbar />
       <section className='homediv'>
         <form onSubmit={handleSubmit}>
-        <div id='searchbar'>
-          <section className='searchinput'>
-            <input
-              type="text"
-              name="from"
-              placeholder='from'
-              value={city.from}
-              onChange={handleChange}
-              required />
-          </section>
-          <section className='searchinput'>
-            <input
-              type="text"
-              name="to"
-              placeholder='To'
-              value={city.to}
-              onChange={handleChange}
-              required />
-          </section>
-          <section className='searchinput'>
-            <input
-              type="date"
-              placeholder='Date' />
-          </section>
-          <section className='searchinput'> <button type='submit'
-            className='bussearch'>Search</button> </section>
-        </div>
+          <div id='searchbar'>
+            <section className='searchinput'>
+              <input
+                type="text"
+                name="from"
+                placeholder='from'
+                value={city.from}
+                onChange={handleChange}
+                required />
+            </section>
+            <section className='searchinput'>
+              <input
+                type="text"
+                name="to"
+                placeholder='To'
+                value={city.to}
+                onChange={handleChange}
+                required />
+            </section>
+            <section className='searchinput'>
+              <input
+                type="date"
+                placeholder='Date' />
+            </section>
+            <section className='searchinput'> <button type='submit'
+              className='bussearch'>Search</button> </section>
+          </div>
         </form>
       </section>
     </div>

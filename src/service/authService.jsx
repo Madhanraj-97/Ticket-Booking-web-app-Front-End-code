@@ -26,8 +26,6 @@ const deleteBus = (busid) => {
 };
 const getBuslist = (city) => {
   return axios.get(`${API_URL}bus/buslist?source=${city.from}&destination=${city.to}`);
-  // return axios.get(`http://localhost:8080/bus/buslist?source=${city.from}&destination=${city.to}`)
-
 }
 
 
