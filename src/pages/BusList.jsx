@@ -14,8 +14,8 @@ export default function BusList() {
       <p>result</p>
       <ul>
         {busList.map((bus) => (
-          <li key={bus.id}>
-            <div>
+          <li  key={bus.id}>
+            <div className='bus'>
               <div>{bus.busno}</div>
               <div>{bus.seatcapacity}</div>
               <div>{bus.ac}</div>
