@@ -1,6 +1,8 @@
 import axios from 'axios';
 
+
 const API_URL = 'https://ticketz-booking-app.onrender.com/'; // Backend API endpoint
+
 
 const registerAdmin = (adminDetails) => {
   return axios.post(`${API_URL}admin`, adminDetails); // Admin registration API call
@@ -24,9 +26,13 @@ const modifyBus = (bus, id) => {
 const deleteBus = (busid) => {
   return axios.put(`${API_URL}admin/deletebus?id=${busid}`);
 };
-const getBuslist = (city) => {
-  return axios.get(`${API_URL}bus/buslist?source=${city.from}&destination=${city.to}`);
+const addSchedule= (schedule,id)=>{
+  return axios.put(`${API_URL}admin/saveschedule?id=${id}`,schedule)
+}
+const searchBus=(from,to,date)=>{
+  return axios.get(`${API_URL}schedule/searchbus?from=${from}&to=${to}&date=${date}`);
 }
 
 
-export default { registerAdmin, loginAdmin, saveBus, modifyBus, getAdminById, deleteBus, getBuslist };
+
+export default { addSchedule, registerAdmin, loginAdmin, saveBus, modifyBus, getAdminById, deleteBus, searchBus };

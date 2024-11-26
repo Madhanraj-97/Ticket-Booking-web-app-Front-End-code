@@ -8,8 +8,9 @@ import React from 'react';
 
 export function AdminBusList() {
 
-    const { admin,setAdmin } = useContext(AdminContext);
+    const { admin, setAdmin } = useContext(AdminContext);
     const busList = admin.bus;
+    console.log(busList);
 
     const handleDelete = async (id) => {
         try {
@@ -28,10 +29,9 @@ export function AdminBusList() {
                 <th>Seat Count</th>
                 <th>Bus Type</th>
                 <th>Seat Type</th>
-                <th>Route</th>
-                <th>EDIT</th>
-                <th>Delete</th>
-                <th>Show seats</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             {busList.map((bus) => (
                 <tr key={bus.id}>
@@ -39,57 +39,23 @@ export function AdminBusList() {
                     <td>{bus.seatcapacity}</td>
                     <td>{bus.ac}</td>
                     <td>{bus.seattype}</td>
-                    <td>{bus.schedule.sourcecity}{" <---> "}{bus.schedule.destinationcity}</td>
                     <td>
-                        <Link className='nav-link' to="/home/editbus" state={{ bus }}>
+                        <Link className='nav-link' to="/admin/editbus" state={{ bus }}>
                             <button>Edit</button>
                         </Link>
                     </td>
                     <td>
-                    <button id="delete" onClick={() => handleDelete(bus.id)}>
-                                    Delete
-                                </button>
+                        <button id="delete" onClick={() => handleDelete(bus.id)}>
+                            Delete
+                        </button>
                     </td>
-                    <td><table>
-            <tr>
-                <th>Reg No.</th>
-                <th>Seat Count</th>
-                <th>Bus Type</th>
-                <th>Seat Type</th>
-                <th>Route</th>
-                <th>EDIT</th>
-                <th>Delete</th>
-                <th>Show seats</th>
-            </tr>
-            {busList.map((bus) => (
-                <tr key={bus.id}>
-                    <td>{bus.busno}</td>
-                    <td>{bus.seatcapacity}</td>
-                    <td>{bus.ac}</td>
-                    <td>{bus.seattype}</td>
-                    <td>{bus.schedule.sourcecity}{" <---> "}{bus.schedule.destinationcity}</td>
                     <td>
-                        <Link className='nav-link' to="/home/editbus" state={{ bus }}>
-                            <button>Edit</button>
+                    <Link className='nav-link' to="/admin/schedule" state={{ bus }}>
+                            <button>Schedules</button>
                         </Link>
                     </td>
-                    <td>
-                    <button id="delete" onClick={() => handleDelete(bus.id)}>
-                                    Delete
-                                </button>
-                    </td>
-                    <td>
-                        <button id='seatbtn' type="button" >Show seats</button>
-                    </td>
                 </tr>
             ))}
         </table>
-                        <button id='seatbtn' type="button" >Show seats</button>
-                    </td>
-                </tr>
-            ))}
-        </table>
-    </>
-
-    );
+    </>);
 }

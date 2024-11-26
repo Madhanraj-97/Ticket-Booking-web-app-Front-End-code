@@ -1,6 +1,6 @@
 tr,td,th,table{
     padding: 10px 15px ;
-    border: 1px  solid greenyellow;
+    /* border: 1px  solid greenyellow; */
     text-align: center;
 }
 table,tr,th,td{

@@ -47,7 +47,7 @@ export function EditBus() {
             const response = await authService.modifyBus(editedBus, editedBus.id);// API call for modify bus
             console.log("editedBus modifiy successfully:", response.data);
             setAdmin(response.data.data);
-            navigate('/Home/buslist');
+            navigate('/admin/buslist');
            
         } catch (error) {
             console.error("Error saving editedBus:", error.AdminContext);
@@ -77,21 +77,6 @@ export function EditBus() {
                 <input type="radio" name="seattype" value="Seater" checked={editedBus.seattype === 'Seater'}  onChange={handleChange} /> Seater
                 <input type="radio" name="seattype" value="Sleeper" checked={editedBus.seattype === 'Sleeper'} onChange={handleChange} /> Sleeper
             </label>
-
-            <label htmlFor="sourcecity">Select Route: {" "}
-                <input type="text" placeholder="From" name="sourcecity" value={editedBus.schedule.sourcecity} onChange={handleChange} />
-                {"<--->"}
-                <input type="text" placeholder="To" name="destinationcity" value={editedBus.schedule.destinationcity} onChange={handleChange} />
-            </label>
-
-            <label htmlFor="distance">Distance:  
-                <input type="text" name="distance" value={editedBus.schedule.distance} onChange={handleChange} required/>
-            </label>
-
-            <label htmlFor="estimatedtime">Travel Duration:
-                <input type="text" name="estimatedtime" value={editedBus.schedule.estimatedtime} onChange={handleChange} required />
-            </label>
-
             <button  type="submit">Submit</button>
         </form>
     );

@@ -9,6 +9,9 @@ import { AdminBusList } from './AdminBusList';
 import { AddBus } from './AddBus';
 import { EditBus } from './EditBus';
 import React from 'react';
+import BusSchedule from './ScheduleList';
+import ScheduleList from './ScheduleList';
+import Schedule from './Schedule';
 
 
 export function AdminHome() {
@@ -30,6 +33,8 @@ export function AdminHome() {
         <Route path="/adminbuslist" element={<AdminBusList />} />
         <Route path='/addbus' element={<AddBus />} />
         <Route path='/editbus' element={<EditBus/>} />
+        <Route path='/schedule' element={<ScheduleList/>}/>
+        <Route path='/addschedule/:id' element={<Schedule/>}/>
       </Routes>
     </>
   );

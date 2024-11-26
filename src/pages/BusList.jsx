@@ -16,11 +16,7 @@ export default function BusList() {
         {busList.map((bus) => (
           <li  key={bus.id}>
             <div className='bus'>
-              <div>{bus.busno}</div>
-              <div>{bus.seatcapacity}</div>
-              <div>{bus.ac}</div>
-              <div>{bus.seattype}</div>
-              <div>{bus.schedule.sourcecity}{" <---> "}{bus.schedule.destinationcity}</div>
+              
             </div>
           </li>)
         )}

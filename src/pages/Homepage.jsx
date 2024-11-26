@@ -9,7 +9,8 @@ export default function Homepage() {
 
   const [city, setCity] = useState({
     from: "",
-    to: ""
+    to: "",
+    date:'',
   });
 
   const [buslist, setBuslist] = useState(null);
@@ -23,7 +24,7 @@ export default function Homepage() {
     e.preventDefault();
     try {
       console.log("Request Data:", city);
-      const response = await authService.getBuslist(city);
+      const response = await authService.searchBus(city.from,city.to,city.date);
       console.log("Response:", response.data);
       setBuslist(response.data.data);
       navigate("/buslist", { state: response.data });
@@ -57,9 +58,12 @@ export default function Homepage() {
                 required />
             </section>
             <section className='searchinput'>
-              <input
+              <input name='date'
                 type="date"
-                placeholder='Date' />
+                placeholder='Date'
+                value={city.date}
+                onChange={handleChange}
+                required />
             </section>
             <section className='searchinput'> <button type='submit'
               className='bussearch'>Search</button> </section>
