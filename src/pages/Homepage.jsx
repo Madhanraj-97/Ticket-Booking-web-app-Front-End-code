@@ -2,7 +2,8 @@ import UserNavbar from '../component/UserNavbar';
 import '../assets/homepage.css';
 import { useState } from 'react'
 import authService from '../service/authService';
-import { useNavigate } from 'react-router-dom';
+import { Route, Router, Routes, useNavigate } from 'react-router-dom';
+import Seats from './Seats';
 
 export default function Homepage() {
   const navigate = useNavigate();

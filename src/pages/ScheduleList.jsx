@@ -15,7 +15,7 @@ export default function ScheduleList() {
                 <li>Sear count: {bus.seatcapacity}</li>
             </ul>
         </div>
-        {schedules.length !== 0 ? (<ul>
+        {(schedules&&schedules.length > 0) ? (<ul>
             {schedules.map((schedule) => (
                 <li key={schedule.id}>
                     <div>{schedule.date}</div>

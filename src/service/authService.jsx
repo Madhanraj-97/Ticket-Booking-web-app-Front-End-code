@@ -2,6 +2,7 @@ import axios from 'axios';
 
 
 const API_URL = 'https://ticketz-booking-app.onrender.com/'; // Backend API endpoint
+// const API_URL = 'http://localhost:8080/'; // Backend API endpoint
 
 
 const registerAdmin = (adminDetails) => {
